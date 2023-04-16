@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>The Store</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+h1 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.card {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    height: 400px;
+    overflow: hidden;
+    width: 300px;
+    margin-bottom: 20px;
+    margin: 5px;
+}
+
+.card > figure {
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.card > figure > img {
+    width: 100%;
+}
+
+.details {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    transition: box-shadow .3s ease-in-out,
+                top .3s ease-in-out;
+}
+
+.card:hover .details {
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
+    top: 40%;
+}
+
+.details > .min-details,
+.details > .options,
+.details > .options > .options-size,
+.details > .options > .options-colors {
+    margin-bottom: 20px;
+}
+
+.details > .min-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details > .min-details > h1 > span {
+    color: #7B7B7B;
+    display: block;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.details > .options h1 {
+    margin-bottom: 5px;
+}
+
+.details > .options ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.details > .options ul li {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 5px;
+    text-align: center;
+    width: 30px;
+}
+
+.options-size > ul > li {
+    background-color: rgba(0,0,0,0.5);
+    color: #FFF;
+    font-size: .7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: background-color .3s ease-in-out;
+}
+
+.options-size > ul > li:hover {
+    background-color: #192a56;
+}
+
+.options-colors > ul > li {
+    border: none;
+}
+
+.options-colors > ul > li:nth-child(1) {
+    background-color: #FF1;
+}
+
+.options-colors > ul > li:nth-child(2) {
+    background-color: #000;
+}
+
+.options-colors > ul > li:nth-child(3) {
+    background-color: #FB0000;
+}
+
+.options-colors > ul > li:nth-child(4) {
+    background-color: #FF69B4;
+}
+
+.options-colors > ul > li:nth-child(5) {
+    background-color: #192a56;
+}
+
+.btn {
+    background-color: #192a56;
+    border-radius: 5px;
+    color: #FFF;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 100%;
+    transition: box-shadow .3s ease-in-out,
+                transform .3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  transform: translateY(-2px);
+}
+.card-wrap{
+   display: flex;
+   justify-content: center;
+   margin: 5px;
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+   <div class="navbar">
+        <div class="logo">
+            <img src="/585990814f6ae202fedf28d6.png" alt="LOGO" width="120px">
+        </div>
+        <nav>
+            <ul>
+            
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/product.html">Shop</a></li>
+                <li><a href="">Membership</a></li>
+                <li><a href="/cart.html">Cart</a></li>
+                
+ 
+                </ul>
+
+            
+
+        </nav>
+    </div>
+
+
+
+
+
+    <h1 style="text-align:center">"Our Special item <i style="color:red">Just for you</i>"</h1>
+    <div class="card-wrap">
+        <div class="card">
+            <figure>
+              <img src="" id="myImg"    alt="t-shirt">
+            </figure>
+            <section class="details">
+              <div class="min-details">
+                <h1>Levis<span>Men's t-shirt</span></h1>
+                <h1 class="price" > $1.99 <i style="text-decoration:line-through;color: red;">$49.99</i></h1>
+              </div>
+          
+              <div class="options">
+                <div class="options-size">
+                  <h1>sizes</h1>
+                  <ul>
+                    <li>xs</li>
+                    <li>s</li>
+                    <li>m</li>
+                    <li>l</li>
+                    <li>xl</li>
+                  </ul>
+                </div>
+                <div>
+                </div>
+                <a href="#" class="btn">add to cart</a>
+              </section>
+            </div></div>
+
+
+
+
+
+
+
+
+
+
+
+
+        
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+            
+                <div class="footer-clo-two">
+                    <img src="/zara-white.png" alt="">
+                    <p><i>"Our Prupose is to sustainibly make the pleasure and benefits of Good Clothing Accessible to the Many"</i></p>
+                </div>
+                <div class="footer-clo-three">
+                    <h3>Useful Links</h3>
+                    <ul>
+                    <li>Coupons</li>
+                    <li>Blog</li>
+                    <li>Return Policy</li>
+                    <li>Join Affliate</li>
+                    </ul>
+
+                </div>
+                <div class="footer-clo-four">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>facebook</li>
+                        <li>Instagram</li>
+                        <li>twitter</li>
+                        <li>Youtube</li>
+
+                    </ul>
+                  
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+
+
+    <script>
+let a1 = '/img/img2.jpg'
+let a2 = '/img/img3.jpg'
+let a3 = '/img/img4.jpg'
+let arry = ['/img/img2.jpg', '/img/img2.jpg','/img/img2.jpg']
+
+
+function randomNumber(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    let randomo = Math.floor(Math.random() * (max - min + 1)) + min;
+}
+randomNumber(0,2)
+
+function pic(){
+    let bc = randomNumber(0,2)
+
+    return(
+        arry[bc]
+    )
+}
+
+
+const magic = function getRandomValueFromArray() {
+  const myArray = ['/img/img2.jpg', '/img/img2.jpg','/img/img2.jpg']// an example array of values
+  const randomIndex = Math.floor(Math.random() * 3); // generate a random integer between 0 and 2
+  return myArray[randomIndex]; // return the value at the random index
+}
+
+
+const img = document.getElementById('myImg'); // select the img element
+  img.src = magic();
+
+
+
+
+    </script>
+</body>
+</html>

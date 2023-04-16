@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>The Store</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Ubuntu');
+
+
+h1 {
+    font-size: 1.2rem;
+    text-transform: capitalize;
+}
+
+.card {
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.3);
+    height: 400px;
+    overflow: hidden;
+    width: 300px;
+    margin-bottom: 20px;
+    margin: 5px;
+}
+
+.card > figure {
+    width: 90%;
+    margin: 20px auto 0 auto;
+}
+
+.card > figure > img {
+    width: 100%;
+}
+
+.details {
+    background-color: #FFF;
+    border-radius: 10px;
+    padding: 20px;
+    position: absolute;
+    top: 85%;
+    width: 100%;
+    transition: box-shadow .3s ease-in-out,
+                top .3s ease-in-out;
+}
+
+.card:hover .details {
+    box-shadow: 0 -5px 10px rgba(0,0,0,0.3);
+    top: 40%;
+}
+
+.details > .min-details,
+.details > .options,
+.details > .options > .options-size,
+.details > .options > .options-colors {
+    margin-bottom: 20px;
+}
+
+.details > .min-details {
+    display: flex;
+    justify-content: space-between;
+}
+
+.details > .min-details > h1 > span {
+    color: #7B7B7B;
+    display: block;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+.details > .options h1 {
+    margin-bottom: 5px;
+}
+
+.details > .options ul {
+    list-style-type: none;
+    display: flex;
+}
+
+.details > .options ul li {
+    border-radius: 50%;
+    cursor: pointer;
+    height: 30px;
+    line-height: 30px;
+    margin-right: 5px;
+    text-align: center;
+    width: 30px;
+}
+
+.options-size > ul > li {
+    background-color: rgba(0,0,0,0.5);
+    color: #FFF;
+    font-size: .7rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: background-color .3s ease-in-out;
+}
+
+.options-size > ul > li:hover {
+    background-color: #192a56;
+}
+
+.options-colors > ul > li {
+    border: none;
+}
+
+.options-colors > ul > li:nth-child(1) {
+    background-color: #FF1;
+}
+
+.options-colors > ul > li:nth-child(2) {
+    background-color: #000;
+}
+
+.options-colors > ul > li:nth-child(3) {
+    background-color: #FB0000;
+}
+
+.options-colors > ul > li:nth-child(4) {
+    background-color: #FF69B4;
+}
+
+.options-colors > ul > li:nth-child(5) {
+    background-color: #192a56;
+}
+
+.btn {
+    background-color: #192a56;
+    border-radius: 5px;
+    color: #FFF;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 100%;
+    transition: box-shadow .3s ease-in-out,
+                transform .3s ease-in-out;
+}
+
+.btn:hover {
+  box-shadow: 0 5px 10px rgba(0,0,0,.3);
+  transform: translateY(-2px);
+}
+.card-wrap{
+   display: flex;
+   justify-content: center;
+   margin: 5px;
+}
+@media screen and (max-width:660px){
+
+  .card-wrap{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .min-details h1{
+        color: black;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="container">
+   <div class="navbar">
+        <div class="logo">
+            <img src="/585990814f6ae202fedf28d6.png" alt="LOGO" width="120px">
+        </div>
+        <nav>
+            <ul>
+            
+               <li><a href="#">Home</a></li>
+               <li><a href="/product.html">Shop</a></li>
+               <li><a href="/login/login.html">Membership</a></li>
+               <li><a href="/cart.html">Cart</a></li>
+
+               </ul>
+
+        </nav>
+        </div>
+        <div class="row-cont-wrap">
+            <div class="row-cont">
+                <div class="col-cont-two">
+                    <h1>Fashion <br>equals <i style="color: red">ZARA</i></h1>
+                    <p><i>From Runway to Real Life - Get Inspired by Our Fashion-Forward Designs!<i></i></p>
+                    <a href="/product.html">Shop Now! &#9758;</a>
+                </div>
+                
+                <div class="col-cont-two">
+                    <img src="/pngegg.png" width="200px" alt="img">
+                </div>
+                
+            </div>
+            </div>
+    </div>
+    <section class="slider-wrapper">
+        <button class="slide-arrow" id="slide-arrow-prev">
+          &#8249;
+        </button>
+        <button class="slide-arrow" id="slide-arrow-next">
+          &#8250;
+        </button>
+        <ul class="slides-container" id="slides-container">
+          <li class="slide liimg"><img src="/babi.png" alt=""></li>
+          <li class="slide liimg"> <img src="/babi_1.png" alt=""></li>
+          <li class="slide liimg"> <img src="/babi_2.jpg" alt=""></li>
+          <li class="slide liimg"> <img src="/babi_4.png" alt=""></li>
+        </ul>
+      </section>
+
+      <div class="product-cat">
+        <div class="prod-wrapo">
+        <div class="row-cont">
+            <div class="prod-col">
+                <img src="/m64816810912_1.jpg" alt="product-cat">
+            </div>
+            <div class="prod-col">
+                <img src="/s-l500.jpg" alt="product-cat">
+            </div>
+            <div class="prod-col">
+                <img src="/7200023505_1_1_1.jpg" alt="product-cat">
+            </div>
+        
+        </div>
+        </div>
+        
+    </div>
+    <div class="product-cat">
+        <div class="prod-wrapo">
+        <div class="row-cont">
+            <div class="prod-col">
+                <img src="/m64816810912_1.jpg" alt="product-cat">
+            </div>
+            <div class="prod-col">
+                <img src="/s-l500.jpg" alt="product-cat">
+            </div>
+            <div class="prod-col">
+                <img src="/7200023505_1_1_1.jpg" alt="product-cat">
+            </div>
+        
+        </div>
+        </div>
+        
+    </div>
+     
+    <div class="banner-prod">
+        <div class="left-banner-prod">
+            <h1>Summer Sale <i style="color:red">50%</i> off</h1>
+        </div>
+       <!-- <button class="buy-prod">
+        <i>Shop Now!</i>
+       </button> -->
+    </div>
+
+
+
+
+
+
+<div class="card-wrap">
+    <div class="card">
+        <figure>
+          <img src="img/img2.jpg" alt="t-shirt">
+        </figure>
+        <section class="details">
+          <div class="min-details">
+            <h1>Levis<span>Men's t-shirt</span></h1>
+            <h1 class="price">$45.99</h1>
+          </div>
+      
+          <div class="options">
+            <div class="options-size">
+              <h1>sizes</h1>
+              <ul>
+                <li>xs</li>
+                <li>s</li>
+                <li>m</li>
+                <li>l</li>
+                <li>xl</li>
+              </ul>
+            </div>
+            <div>
+            </div>
+            <a href="#" class="btn">add to cart</a>
+          </section>
+        </div>
+        <div class="card">
+            <figure>
+              <img src="https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg" alt="t-shirt">
+            </figure>
+            <section class="details">
+              <div class="min-details">
+                <h1>brand name<span>Men's t-shirt</span></h1>
+                <h1 class="price">$45.99</h1>
+              </div>
+          
+              <div class="options">
+                <div class="options-size">
+                  <h1>sizes</h1>
+                  <ul>
+                    <li>xs</li>
+                    <li>s</li>
+                    <li>m</li>
+                    <li>l</li>
+                    <li>xl</li>
+                  </ul>
+                </div>
+                <div>
+                </div>
+                <a href="#" class="btn">add to cart</a>
+              </section>
+            </div>
+
+            <div class="card">
+                <figure>
+                  <img src="https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg" alt="t-shirt">
+                </figure>
+                <section class="details">
+                  <div class="min-details">
+                    <h1>brand name<span>Men's t-shirt</span></h1>
+                    <h1 class="price">$45.99</h1>
+                  </div>
+              
+                  <div class="options">
+                    <div class="options-size">
+                      <h1>sizes</h1>
+                      <ul>
+                        <li>xs</li>
+                        <li>s</li>
+                        <li>m</li>
+                        <li>l</li>
+                        <li>xl</li>
+                      </ul>
+                    </div>
+                    <div>
+                    </div>
+                    <a href="#" class="btn">add to cart</a>
+                  </section>
+                </div>
+                </div>
+                <div class="card-wrap">
+                    <div class="card">
+                        <figure>
+                          <img src="https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg" alt="t-shirt">
+                        </figure>
+                        <section class="details">
+                          <div class="min-details">
+                            <h1>brand name<span>Men's t-shirt</span></h1>
+                            <h1 class="price">$45.99</h1>
+                          </div>
+                      
+                          <div class="options">
+                            <div class="options-size">
+                              <h1>sizes</h1>
+                              <ul>
+                                <li>xs</li>
+                                <li>s</li>
+                                <li>m</li>
+                                <li>l</li>
+                                <li>xl</li>
+                              </ul>
+                            </div>
+                            <div>
+                            </div>
+                            <a href="#" class="btn">add to cart</a>
+                          </section>
+                        </div>
+                        <div class="card">
+                            <figure>
+                              <img src="https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg" alt="t-shirt">
+                            </figure>
+                            <section class="details">
+                              <div class="min-details">
+                                <h1>brand name<span>Men's t-shirt</span></h1>
+                                <h1 class="price">$45.99</h1>
+                              </div>
+                          
+                              <div class="options">
+                                <div class="options-size">
+                                  <h1>sizes</h1>
+                                  <ul>
+                                    <li>xs</li>
+                                    <li>s</li>
+                                    <li>m</li>
+                                    <li>l</li>
+                                    <li>xl</li>
+                                  </ul>
+                                </div>
+                                <div>
+                                </div>
+                                <a href="#" class="btn">add to cart</a>
+                              </section>
+                            </div>
+              
+                            <div class="card">
+                                <figure>
+                                  <img src="https://static2.cilory.com/189111-thickbox_default/no-logo-royal-blue-full-sleeves-henley-t-shirt.jpg" alt="t-shirt">
+                                </figure>
+                                <section class="details">
+                                  <div class="min-details">
+                                    <h1>brand name<span>Men's t-shirt</span></h1>
+                                    <h1 class="price">$45.99</h1>
+                                  </div>
+                              
+                                  <div class="options">
+                                    <div class="options-size">
+                                      <h1>sizes</h1>
+                                      <ul>
+                                        <li>xs</li>
+                                        <li>s</li>
+                                        <li>m</li>
+                                        <li>l</li>
+                                        <li>xl</li>
+                                      </ul>
+                                    </div>
+                                    <div>
+                                    </div>
+                                    <a href="#" class="btn">add to cart</a>
+                                  </section>
+                                </div>
+                                </div>
+
+
+
+                                <div class="footer">
+                                  <div class="footer-container">
+                                      <div class="footer-row">
+                                      
+                                          <div class="footer-clo-two">
+                                              <img src="/zara-white.png" alt="">
+                                              <p><i>"Our Prupose is to sustainibly make the pleasure and benefits of Good Clothing Accessible to the Many"</i></p>
+                                          </div>
+                                          <div class="footer-clo-three">
+                                              <h3>Useful Links</h3>
+                                              <ul>
+                                              <li>Coupons</li>
+                                              <li>Blog</li>
+                                              <li>Return Policy</li>
+                                              <li>Join Affliate</li>
+                                              </ul>
+                          
+                                          </div>
+                                          <div class="footer-clo-four">
+                                              <h3>Follow us</h3>
+                                              <ul>
+                                                  <li>facebook</li>
+                                                  <li>Instagram</li>
+                                                  <li>twitter</li>
+                                                  <li>Youtube</li>
+                          
+                                              </ul>
+                                            
+                          
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+        
+</body>
+</html>

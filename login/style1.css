@@ -1,0 +1,173 @@
+*
+{
+    font-family: sans-serif;
+    margin: 0px;
+}
+
+  .signup-box {
+    width: 360px;
+    height: 620px;
+    margin: auto;
+    background-color: white;
+    border-radius: 3px;
+    
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+  }
+  
+  
+  h1 {
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  h4 {
+    text-align: center;
+  }
+  
+  form {
+    width: 300px;
+    margin-left: 20px;
+  }
+  
+  form label {
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+
+  }
+  
+  form input {
+    width: 100%;
+    outline: none;
+    border: none;
+    background: #dfe9f5;
+    padding: 8px 10px;
+    border-radius: 10px;
+    outline: none;
+  }
+  button[type="submit"] {
+    width: 320px;
+    height: 35px;
+    margin-top: 15px;
+    border: none;
+    background-color:black;
+    color: white;
+    font-size: 18px;
+  }
+  button[type="submit"]:hover {
+    
+    background-color:red;
+    color: white;
+  }
+
+  p {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 15px;
+  }
+  .signin{
+    text-align: center;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: -10px;
+    margin-bottom: 20px;
+  }
+  .signin a {
+    color: red;
+  }
+  .link
+  {
+    text-decoration: none;
+    font-weight: bold;
+    
+  }
+
+
+
+  
+
+.navbar{
+    display: flex;
+    align-items: center;
+}
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+body {
+    background-color: white;
+    color: black;
+}
+.detail-p
+{
+    display: flex;
+}
+body.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+nav{
+    flex:1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style: none;
+    
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 25px;
+}
+a{
+    text-decoration: none;
+    color: #555;
+}
+
+
+
+
+
+
+.footer{
+    background-color: black;
+    color: white;
+    font-size: 14px;
+    padding: 60px 0 20px;
+}
+.footer-row{
+    display: flex;
+
+}
+.footer p{
+    color: white;
+}
+.footer h3{
+    color: red;
+}
+.footer-clo-one,.footer-clo-two,.footer-clo-three,.footer-clo-four{
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+.footer-clo-one{
+    flex-basis: 30%;
+}
+.footer-clo-two{
+    flex: 1;
+    text-align: center;
+}
+.footer-clo-two img{
+    width: 180px;
+    margin-bottom: 20px;
+}
+.footer-clo-three,.footer-clo-four{
+    flex-basis: 12%;
+    text-align: center ;
+}
+ul{
+    list-style-type: none;
+}

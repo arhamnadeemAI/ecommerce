@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-wO4+g4fJG1rvO4umHl9mejozS1+2kTcE+8Y2x+WMoVtMqon03Eh0tqX0t16aFbZvAOKetph30RkxQx+frK/3hQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>The Store  </title>
+</head>
+<body>
+
+    <div class="container">
+    <div class="navbar">
+        <div class="logo">
+            <img src="/585990814f6ae202fedf28d6.png" alt="LOGO" width="120px">
+        </div>
+        <nav>
+            <ul>
+            
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/product.html">Shop</a></li>
+                <li><a href="/login/login.html">Membership</a></li>
+                <li><a href="#">Cart</a></li>
+                
+ 
+                </ul>
+        </nav>
+    </div>
+    
+    </div>
+   <!-- cart -->
+   <div class="small-container" id="cont-small">
+    <table>
+        <tr>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>SubTotal</th>
+        </tr>
+        <tr><td><div id="js-invoke"></div></td></tr>
+        <!-- <tr class="cart-prod">
+            <td class="cart-td-prod"><div class="cart-info">
+                <img src="/img/img2.jpg" width="50px" alt="">
+                <div>
+                    <p>Red Levis Jeans</p>
+                    <small>Price: $50.00</small>
+                    <a href="">Remove</a>
+                </div>
+            </div></td>
+            <td> <input type="number" value="1"></td>
+            <td>$50.00</td>
+         </tr>
+         <tr>
+            <td><div class="cart-info">
+                <img src="/img/img2.jpg" width="50px" alt="">
+                <div>
+                    <p>Red Levis Jeans</p>
+                    <small>Price: $50.00</small>
+                    <a href="">Remove</a>
+                </div>
+            </div></td>
+            <td> <input type="number" value="1"></td>
+            <td>$50.00</td>
+            
+         </tr> -->
+         <!-- <tr><td><div id="cartItem">Your Cart is empty</div> -->
+        <tr class="cart-prod">
+            <td class="cart-td-prod">
+                <tr>
+      
+                 <tr>
+                    <td><div class="cart-info">
+                        <img src="/img/img2.jpg" width="50px" alt="">
+                        <div class="cart-prop">
+                            <p>Red Levis Jeans</p>
+                            <small>Price: $50.00 <i>($90.00)</i></small>
+                            <a href="">Remove</a>
+                        </div>
+                    </div></td>
+                    <td> <input class="td_inp"  type="number" value="1"></td>
+                    <td class="td_price">$50.00</td>
+                    
+                 </tr>
+         <tr>
+            <td><div class="cart-info">
+                <img src="/img/img2.jpg" width="50px" alt="">
+                <div class="cart-prop">
+                    <p>Red Levis Jeans</p>
+                    <small>Price: $50.00 <i>($90.00)</i></small>
+                    <a href="">Remove</a>
+                </div>
+            </div></td>
+            <td> <input class="td_inp" type="number" value="1"></td>
+            <td class="td_price">$50.00</td>
+         </tr>
+            
+         </tr></td></tr>
+    <div class="total-price">
+        <table>
+            <tr>
+                <td>SubTotal</td>
+                <td id="big_total">100</td>
+            </tr>
+            <tr>
+                <td>Tax</td>
+                <td>35$</td>
+            </tr> <tr>
+                <td>Total</td>
+                <td>135$.00</td>
+            </tr>
+        
+        </table>
+    </div>
+   </div>
+
+        
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-row">
+            
+                <div class="footer-clo-two">
+                    <img src="/zara-white.png" alt="">
+                    <p><i>"Our Prupose is to sustainibly make the pleasure and benefits of Good Clothing Accessible to the Many"</i></p>
+                </div>
+                <div class="footer-clo-three">
+                    <h3>Useful Links</h3>
+                    <ul>
+                    <li>Coupons</li>
+                    <li>Blog</li>
+                    <li>Return Policy</li>
+                    <li>Join Affliate</li>
+                    </ul>
+
+                </div>
+                <div class="footer-clo-four">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>facebook</li>
+                        <li>Instagram</li>
+                        <li>twitter</li>
+                        <li>Youtube</li>
+
+                    </ul>
+                  
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <script src="/js/cartarr.js"></script>
+    <script>
+
+// const input = document.getElementById('id_two');
+// const price = document.querySelector('.cart-prop small').innerText.split('$')[1];
+// const total = document.getElementById('two');
+
+
+// input.addEventListener('input', () => {
+//   total.innerText = '$' + (price * input.value).toFixed(2);
+// });
+
+// get all the necessary elements from the DOM
+const inputs = document.querySelectorAll('.td_inp');
+const prices = document.querySelectorAll('.td_price');
+
+// update the total price for each row when its input changes
+inputs.forEach((input, index) => {
+  const price = parseFloat(document.querySelectorAll('.cart-prop small')[index].innerText.split('$')[1]);
+  const total = prices[index];
+  
+  input.addEventListener('input', () => {
+    total.innerText = '$' + (price * input.value).toFixed(2);
+  });
+});
+// Get all the elements with class td_price
+
+// Loop through each element and calculate the total price
+let totalPrice = 0;
+prices.forEach(price => {
+  const quantity = price.parentNode.querySelector('.td_inp').value;
+  const unitPrice = price.textContent.replace('$', '');
+  totalPrice += (unitPrice * quantity);
+});
+
+// Set the total price in the element with id big_total
+document.getElementById('big_total').textContent = `$${totalPrice.toFixed(2)}`;
+
+
+
+
+
+    </script>
+
+</body>
+</html>
